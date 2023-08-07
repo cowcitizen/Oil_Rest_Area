@@ -1,0 +1,365 @@
+name: Oil_Rest_Area
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.4 <3.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter_native_splash: ^1.2.1
+  flutter:
+    sdk: flutter
+  fluttertoast: ^8.0.8
+  shared_preferences: ^2.2.0
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  http: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+flutter_native_splash:
+  color: "#ffbd59"
+  image: assets/splash_screen/rest_area_logo.png
+  fill: false
+  android: true
+  ios: true
+
+  
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  assets:
+    #리스트
+    - assets/list/fullerstations.json
+    #도,시,광역시
+    - assets/province_logo/gyeonggi-do logo_1.png
+    - assets/province_logo/busan metropolitan city logo_1.png
+    - assets/province_logo/chungcheongbuk-do logo_1.png
+    - assets/province_logo/chungcheongnam-do logo_1.png
+    - assets/province_logo/daegu metropolitan City logo_1.png
+    - assets/province_logo/daejeon metropolitan city logo_1.png
+    - assets/province_logo/gangwon-do logo_1.png
+    - assets/province_logo/gwangju metropolitan city logo_1.png
+    - assets/province_logo/gyeongsangbuk-do logo_1.png
+    - assets/province_logo/incheon metropolitan city logo_1.png
+    - assets/province_logo/jeju island logo_1.png
+    - assets/province_logo/jeollabuk-do logo_1.png
+    - assets/province_logo/jeollanam-do logo_1.png
+    - assets/province_logo/sejong special self-governing city logo_1.png  
+    - assets/province_logo/seoul logo_1.png
+    - assets/province_logo/ulsan metropolitan city logo_1.png
+    - assets/province_logo/gyeongsangnam-do logo_1.png
+    #경기도
+    - assets/city_county_logo/gyeonggi-do/Ansan city logo.png
+    - assets/city_county_logo/gyeonggi-do/Anseong City logo.png
+    - assets/city_county_logo/gyeonggi-do/Anyang city logo.png
+    - assets/city_county_logo/gyeonggi-do/Bucheon city logo.png
+    - assets/city_county_logo/gyeonggi-do/Dongducheon City logo.png
+    - assets/city_county_logo/gyeonggi-do/Gapyeong County logo.png
+    - assets/city_county_logo/gyeonggi-do/Gimpo city logo.png
+    - assets/city_county_logo/gyeonggi-do/Goyang city logo.png
+    - assets/city_county_logo/gyeonggi-do/Gunpo city logo.png
+    - assets/city_county_logo/gyeonggi-do/Guri city logo.png
+    - assets/city_county_logo/gyeonggi-do/Gwacheon City logo.png
+    - assets/city_county_logo/gyeonggi-do/Gwangju city logo.png
+    - assets/city_county_logo/gyeonggi-do/gwangmyeong city logo.png
+    - assets/city_county_logo/gyeonggi-do/Hanam city logo.png
+    - assets/city_county_logo/gyeonggi-do/Hwaseong city logo.png
+    - assets/city_county_logo/gyeonggi-do/Icheon city logo.png
+    - assets/city_county_logo/gyeonggi-do/Namyangju City logo.png
+    - assets/city_county_logo/gyeonggi-do/Osan city logo.png
+    - assets/city_county_logo/gyeonggi-do/Paju City logo.png
+    - assets/city_county_logo/gyeonggi-do/Pocheon city logo.png
+    - assets/city_county_logo/gyeonggi-do/Pyeongtaek city logo.png
+    - assets/city_county_logo/gyeonggi-do/Seongnam City logo.png
+    - assets/city_county_logo/gyeonggi-do/Siheung City logo.png
+    - assets/city_county_logo/gyeonggi-do/Suwon city logo.png
+    - assets/city_county_logo/gyeonggi-do/Uijeongbu City logo.png
+    - assets/city_county_logo/gyeonggi-do/Uiwang City logo.png
+    - assets/city_county_logo/gyeonggi-do/Yangju City logo.png
+    - assets/city_county_logo/gyeonggi-do/Yangpyeong County logo.png
+    - assets/city_county_logo/gyeonggi-do/Yeoju City logo.png
+    - assets/city_county_logo/gyeonggi-do/Yeoncheon-gun logo.png
+    - assets/city_county_logo/gyeonggi-do/Yongin city logo.png
+    #서울
+    - assets/city_county_logo/seoul/Dobong-gu logo.png
+    - assets/city_county_logo/seoul/Dongdaemun-gu logo.png
+    - assets/city_county_logo/seoul/Dongjak-gu logo.png
+    - assets/city_county_logo/seoul/Eunpyeong-gu logo.png
+    - assets/city_county_logo/seoul/Gangbuk-gu Logo.png
+    - assets/city_county_logo/seoul/Gangdong-gu Logo.png
+    - assets/city_county_logo/seoul/Gangnam District Logo.png
+    - assets/city_county_logo/seoul/golden ball logo.png
+    - assets/city_county_logo/seoul/Guro-gu logo.png
+    - assets/city_county_logo/seoul/Gwanak-gu logo.png
+    - assets/city_county_logo/seoul/Gwangjin-gu logo.png
+    - assets/city_county_logo/seoul/Jongno-gu logo.png
+    - assets/city_county_logo/seoul/Jung-gu logo.png
+    - assets/city_county_logo/seoul/Jungnang-gu Logo.png
+    - assets/city_county_logo/seoul/Mapo-gu logo.png
+    - assets/city_county_logo/seoul/Nowon-gu logo.png
+    - assets/city_county_logo/seoul/Seocho-gu logo.png
+    - assets/city_county_logo/seoul/Seodaemun-gu Logo.png
+    - assets/city_county_logo/seoul/Seongbuk-gu logo.png
+    - assets/city_county_logo/seoul/Seongdong-gu logo.png
+    - assets/city_county_logo/seoul/Seonggu Kang Logo.png
+    - assets/city_county_logo/seoul/Songpa-gu Logo.png          
+    - assets/city_county_logo/seoul/Yangcheon-gu logo.png
+    - assets/city_county_logo/seoul/Yeongdeungpo-gu Logo.png
+    - assets/city_county_logo/seoul/Yongsan-gu logo.png
+    #인천
+    - assets/city_county_logo/incheon/Bupyeong-gu logo.png
+    - assets/city_county_logo/incheon/Dong-gu logo.png
+    - assets/city_county_logo/incheon/Ganghwa-gun logo.png
+    - assets/city_county_logo/incheon/Gyeyang-gu logo.png
+    - assets/city_county_logo/incheon/Jung-gu logo.png
+    - assets/city_county_logo/incheon/Michuhol-gu logo.png
+    - assets/city_county_logo/incheon/Namdong-gu logo.png
+    - assets/city_county_logo/incheon/Ongjin County Logo.png
+    - assets/city_county_logo/incheon/seogu logo.png
+    - assets/city_county_logo/incheon/Yeonsu-gu logo.png
+    #강원도
+    - assets/city_county_logo/gangwon-do/Cheorwon-gun logo.png
+    - assets/city_county_logo/gangwon-do/Chuncheon city logo.png
+    - assets/city_county_logo/gangwon-do/Donghae city logo.png
+    - assets/city_county_logo/gangwon-do/Gangneung City Logo.png
+    - assets/city_county_logo/gangwon-do/Goseong-gun logo.png
+    - assets/city_county_logo/gangwon-do/Hoengseong County Logo.png
+    - assets/city_county_logo/gangwon-do/Hongcheon County Logo.png
+    - assets/city_county_logo/gangwon-do/Hwacheon-gun logo.png
+    - assets/city_county_logo/gangwon-do/Inje-gun logo.png
+    - assets/city_county_logo/gangwon-do/Jeongseon-gun logo.png
+    - assets/city_county_logo/gangwon-do/Pyeongchang-gun logo.png
+    - assets/city_county_logo/gangwon-do/Samcheok city logo.png
+    - assets/city_county_logo/gangwon-do/Sokcho city logo.png
+    - assets/city_county_logo/gangwon-do/Taebaek city logo.png
+    - assets/city_county_logo/gangwon-do/Wonju City Logo.png
+    - assets/city_county_logo/gangwon-do/Yanggu County Logo.png
+    - assets/city_county_logo/gangwon-do/Yangyang-gun logo.png
+    - assets/city_county_logo/gangwon-do/Yeongwol-gun logo.png
+    #충청북도
+    - assets/city_county_logo/chungcheongbuk-do/Boeun-gun logo.png
+    - assets/city_county_logo/chungcheongbuk-do/Cheongju City Logo.png
+    - assets/city_county_logo/chungcheongbuk-do/Chungju City Logo.png
+    - assets/city_county_logo/chungcheongbuk-do/Danyang-gun logo.png
+    - assets/city_county_logo/chungcheongbuk-do/Goesan-gun logo.png
+    - assets/city_county_logo/chungcheongbuk-do/Jecheon city logo.png
+    - assets/city_county_logo/chungcheongbuk-do/Jeungpyeong-gun logo.png
+    - assets/city_county_logo/chungcheongbuk-do/Jincheon-gun logo.png
+    - assets/city_county_logo/chungcheongbuk-do/Okcheon County Logo.png
+    - assets/city_county_logo/chungcheongbuk-do/Voice group logo.png
+    - assets/city_county_logo/chungcheongbuk-do/Yeongdong-gun logo.png
+    #충청남도
+    - assets/city_county_logo/chungcheongnam-do/Asan City Logo.png
+    - assets/city_county_logo/chungcheongnam-do/Boryeong city logo.png
+    - assets/city_county_logo/chungcheongnam-do/Buyeo-gun logo.png
+    - assets/city_county_logo/chungcheongnam-do/Cheonan city logo.png
+    - assets/city_county_logo/chungcheongnam-do/Cheongyang-gun logo.png
+    - assets/city_county_logo/chungcheongnam-do/Dangjin City Logo.png
+    - assets/city_county_logo/chungcheongnam-do/Geumsan-gun logo.png
+    - assets/city_county_logo/chungcheongnam-do/Gongju City Logo.png
+    - assets/city_county_logo/chungcheongnam-do/Gyeryong City Logo.png
+    - assets/city_county_logo/chungcheongnam-do/Hongseong County Logo.png
+    - assets/city_county_logo/chungcheongnam-do/Nonsan city logo.png
+    - assets/city_county_logo/chungcheongnam-do/Seocheon-gun logo.png
+    - assets/city_county_logo/chungcheongnam-do/Seosan City Logo.png
+    - assets/city_county_logo/chungcheongnam-do/Taean-gun logo.png
+    - assets/city_county_logo/chungcheongnam-do/yesan army logo.png
+    #대전
+    - assets/city_county_logo/daejeon metropolitan city/Daedeok-gu logo.png
+    - assets/city_county_logo/daejeon metropolitan city/Dong-gu logo.png
+    - assets/city_county_logo/daejeon metropolitan city/Jung-gu logo.png
+    - assets/city_county_logo/daejeon metropolitan city/seogu logo_2.png
+    - assets/city_county_logo/daejeon metropolitan city/Yuseong-gu logo.png
+    #경상북도
+    - assets/city_county_logo/gyeongsangbuk-do/The logo of Pohang City.png
+    - assets/city_county_logo/gyeongsangbuk-do/Gyeongju City Logo.png
+    - assets/city_county_logo/gyeongsangbuk-do/The logo of Gimcheon City.png
+    - assets/city_county_logo/gyeongsangbuk-do/Logo of Andong City.png
+    - assets/city_county_logo/gyeongsangbuk-do/Logo of Gumi City.png
+    - assets/city_county_logo/gyeongsangbuk-do/The logo of Yeongju City.png
+    - assets/city_county_logo/gyeongsangbuk-do/The logo of Yeongcheon City.png
+    - assets/city_county_logo/gyeongsangbuk-do/Logo of Sangju City.png
+    - assets/city_county_logo/gyeongsangbuk-do/The logo of Mungyeong City.png
+    - assets/city_county_logo/gyeongsangbuk-do/Logo of Gyeongsan City.png
+    - assets/city_county_logo/gyeongsangbuk-do/Logo of the Army.png
+    - assets/city_county_logo/gyeongsangbuk-do/Uiseong County logo.png
+    - assets/city_county_logo/gyeongsangbuk-do/Logo of Cheongsong County.png
+    - assets/city_county_logo/gyeongsangbuk-do/The logo of Yeongyang-gun.png
+    - assets/city_county_logo/gyeongsangbuk-do/Logo of Yeongdeok-gun.png
+    - assets/city_county_logo/gyeongsangbuk-do/Logo of Cheongdo-gun.png
+    - assets/city_county_logo/gyeongsangbuk-do/Logo of Goryeong-gun.png
+    - assets/city_county_logo/gyeongsangbuk-do/Seongju County logo.png
+    - assets/city_county_logo/gyeongsangbuk-do/Logo of Chilgok County.png
+    - assets/city_county_logo/gyeongsangbuk-do/Yecheon County logo.png
+    - assets/city_county_logo/gyeongsangbuk-do/Bonghwa County logo.png
+    - assets/city_county_logo/gyeongsangbuk-do/Logo of Uljin County.png
+    - assets/city_county_logo/gyeongsangbuk-do/Logo of Ulleung-gun.png
+    #부산광역시
+    - assets/city_county_logo/busan metropolitan city/Jung-gu logo.png
+    - assets/city_county_logo/busan metropolitan city/the Western logo.png
+    - assets/city_county_logo/busan metropolitan city/Dong Won logo.png
+    - assets/city_county_logo/busan metropolitan city/The logo of Yeongdo-.png
+    - assets/city_county_logo/busan metropolitan city/Busanjin-gu logo.png
+    - assets/city_county_logo/busan metropolitan city/The logo of Dongnae-gu.png
+    - assets/city_county_logo/busan metropolitan city/Namgu logo.png
+    - assets/city_county_logo/busan metropolitan city/North District Logo.png
+    - assets/city_county_logo/busan metropolitan city/The logo of Haeundae-gu District.png
+    - assets/city_county_logo/busan metropolitan city/The logo of Saha-gu.png
+    - assets/city_county_logo/busan metropolitan city/The logo of Geumjeong-gu.png
+    - assets/city_county_logo/busan metropolitan city/The logo of Gangseo-gu.png
+    - assets/city_county_logo/busan metropolitan city/a softball logo.png
+    - assets/city_county_logo/busan metropolitan city/The logo of the swimming pool.png
+    - assets/city_county_logo/busan metropolitan city/Sasang-gu logo.png
+    - assets/city_county_logo/busan metropolitan city/Logo of Gijanggu.png
+    #경상남도
+    - assets/city_county_logo/gyeongsangnam-do/The logo of Geoje City.png
+    - assets/city_county_logo/gyeongsangnam-do/Logo of Geochang-gun.png
+    - assets/city_county_logo/gyeongsangnam-do/The logo of Goseong-gun.png
+    - assets/city_county_logo/gyeongsangnam-do/The logo of Gimhae City.png
+    - assets/city_county_logo/gyeongsangnam-do/Namhae County logo.png
+    - assets/city_county_logo/gyeongsangnam-do/The logo of Miryang City.png
+    - assets/city_county_logo/gyeongsangnam-do/Sancheong County logo.png
+    - assets/city_county_logo/gyeongsangnam-do/Logo of Yangsan City.png
+    - assets/city_county_logo/gyeongsangnam-do/Logo of Uiryeong-gun.png
+    - assets/city_county_logo/gyeongsangnam-do/The logo of Jinju City.png
+    - assets/city_county_logo/gyeongsangnam-do/Changnyeong County logo.png
+    - assets/city_county_logo/gyeongsangnam-do/The logo of Changwon City.png
+    - assets/city_county_logo/gyeongsangnam-do/Logo of Tongyeong City.png
+    - assets/city_county_logo/gyeongsangnam-do/The logo of Hadong.png
+    - assets/city_county_logo/gyeongsangnam-do/Logo of Haman County.png
+    - assets/city_county_logo/gyeongsangnam-do/Logo of Hamyang-gun.png
+    - assets/city_county_logo/gyeongsangnam-do/Hapcheon-gu logo.png
+    - assets/city_county_logo/gyeongsangnam-do/sacheon_city_logo.png
+    #울산
+    - assets/city_county_logo/ulsan metropolitan city/The logo of Ulju-gun.png
+    - assets/city_county_logo/ulsan metropolitan city/Jung-gu logo.png
+    - assets/city_county_logo/ulsan metropolitan city/North District Logo.png
+    - assets/city_county_logo/ulsan metropolitan city/Namgu logo.png
+    - assets/city_county_logo/ulsan metropolitan city/Dong Won logo.png
+    #대구
+    - assets/city_county_logo/daegu metropolitan City/Recovery Logo.png
+    - assets/city_county_logo/daegu metropolitan City/Dong Won logo.png
+    - assets/city_county_logo/daegu metropolitan City/Jonggu logo.png
+    - assets/city_county_logo/daegu metropolitan City/The logo of Suseong-gu.png
+    - assets/city_county_logo/daegu metropolitan City/the Western logo.png
+    - assets/city_county_logo/daegu metropolitan City/The logo of Dalseo-gu.png
+    - assets/city_county_logo/daegu metropolitan City/Namgu logo.png
+    - assets/city_county_logo/daegu metropolitan City/Dalseong-gun logo.png
+    - assets/city_county_logo/daegu metropolitan City/gunwi_county_logo.png
+    #전라북도
+    - assets/city_county_logo/jeollabuk-do/The logo of Jeonju City.png
+    - assets/city_county_logo/jeollabuk-do/Logo of Gunsan City.png
+    - assets/city_county_logo/jeollabuk-do/The logo of Iksan City.png
+    - assets/city_county_logo/jeollabuk-do/The logo of Jeongeup-si City.png
+    - assets/city_county_logo/jeollabuk-do/Logo of Namwon City.png
+    - assets/city_county_logo/jeollabuk-do/The logo of Gimje City.png
+    - assets/city_county_logo/jeollabuk-do/Logo of Wanju County.png
+    - assets/city_county_logo/jeollabuk-do/Logo of Jinan County.png
+    - assets/city_county_logo/jeollabuk-do/The logo of Muju-gun.png
+    - assets/city_county_logo/jeollabuk-do/The logo of Jangsu-gun.png
+    - assets/city_county_logo/jeollabuk-do/Logo of Imsil-gun.png
+    - assets/city_county_logo/jeollabuk-do/Sunchang County logo.png
+    - assets/city_county_logo/jeollabuk-do/Logo of Gochang-gun.png
+    - assets/city_county_logo/jeollabuk-do/The Buan County logo.png
+    #전라남도
+    - assets/city_county_logo/jeollanam-do/The logo of Mokpo City.png
+    - assets/city_county_logo/jeollanam-do/The logo of Yeosu City.png
+    - assets/city_county_logo/jeollanam-do/The logo of Suncheon City.png
+    - assets/city_county_logo/jeollanam-do/The logo of Naju City.png
+    - assets/city_county_logo/jeollanam-do/The logo of Gwangyang City.png
+    - assets/city_county_logo/jeollanam-do/The logo of Damyang County.png
+    - assets/city_county_logo/jeollanam-do/The logo of Gokseong-gun.png
+    - assets/city_county_logo/jeollanam-do/Gurye County logo.png
+    - assets/city_county_logo/jeollanam-do/Goheung County logo.png
+    - assets/city_county_logo/jeollanam-do/The logo of Boseong County.png
+    - assets/city_county_logo/jeollanam-do/Hwasun County logo.png
+    - assets/city_county_logo/jeollanam-do/Logo of Jangheung County.png
+    - assets/city_county_logo/jeollanam-do/Logo of Gangjin County.png
+    - assets/city_county_logo/jeollanam-do/The logo of Haenam-gu.png
+    - assets/city_county_logo/jeollanam-do/Logo of Yeongam-gun.png
+    - assets/city_county_logo/jeollanam-do/The logo of Muan County.png
+    - assets/city_county_logo/jeollanam-do/Hampyeong County logo.png
+    - assets/city_county_logo/jeollanam-do/The logo of Yeonggwang-gun.png
+    - assets/city_county_logo/jeollanam-do/Logo of Jangseong-gun.png
+    - assets/city_county_logo/jeollanam-do/Logo of Wando County.png
+    - assets/city_county_logo/jeollanam-do/Logo of Jindo County.png
+    - assets/city_county_logo/jeollanam-do/The logo of Sinan County.png
+    #광주
+    - assets/city_county_logo/gwangju metropolitan city/Dong Wons logo.png
+    - assets/city_county_logo/gwangju metropolitan city/the Western logo.png
+    - assets/city_county_logo/gwangju metropolitan city/Namgu logo.png
+    - assets/city_county_logo/gwangju metropolitan city/North District Logo.png
+    - assets/city_county_logo/gwangju metropolitan city/Logo of Mining District.png
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
