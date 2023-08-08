@@ -44,7 +44,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 조치원",
+                                  region: "세종(특별)?(자치)?시? 조치원",
                                   regionName: '세종특별자치시 조치원읍',
                                 )),
                       );
@@ -70,7 +70,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 연기",
+                                  region: "세종(특별)?(자치)?시? 연기",
                                   regionName: '세종특별자치시 연기면',
                                 )),
                       );
@@ -102,7 +102,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 연동",
+                                  region: "세종(특별)?(자치)?시? 연동",
                                   regionName: '세종특별자치시 연동면',
                                 )),
                       );
@@ -128,7 +128,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 부강",
+                                  region: "세종(특별)?(자치)?시? 부강",
                                   regionName: '세종특별자치시 부강면',
                                 )),
                       );
@@ -160,7 +160,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 금남",
+                                  region: "세종(특별)?(자치)?시? 금남",
                                   regionName: '세종특별자치시 금남면',
                                 )),
                       );
@@ -186,7 +186,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 장군",
+                                  region: "세종(특별)?(자치)?시? 장군",
                                   regionName: '세종특별자치시 장군면',
                                 )),
                       );
@@ -218,7 +218,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 연서",
+                                  region: "세종(특별)?(자치)?시? 연서",
                                   regionName: '세종특별자치시 연서면',
                                 )),
                       );
@@ -244,7 +244,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 전의",
+                                  region: "세종(특별)?(자치)?시? 전의",
                                   regionName: '세종특별자치시 전의면',
                                 )),
                       );
@@ -276,7 +276,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 전동",
+                                  region: "세종(특별)?(자치)?시? 전동",
                                   regionName: '세종특별자치시 전동면',
                                 )),
                       );
@@ -302,7 +302,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 소정",
+                                  region: "세종(특별)?(자치)?시? 소정",
                                   regionName: '세종특별자치시 소정면',
                                 )),
                       );
@@ -334,7 +334,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 한솔",
+                                  region: "세종(특별)?(자치)?시? 한솔",
                                   regionName: '세종특별자치시 한솔동',
                                 )),
                       );
@@ -360,7 +360,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 도담",
+                                  region: "세종(특별)?(자치)?시? 도담",
                                   regionName: '세종특별자치시 도담동',
                                 )),
                       );
@@ -392,7 +392,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 아름",
+                                  region: "세종(특별)?(자치)?시? 아름",
                                   regionName: '세종특별자치시 아름동',
                                 )),
                       );
@@ -418,7 +418,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 종촌",
+                                  region: "세종(특별)?(자치)?시? 종촌",
                                   regionName: '세종특별자치시 종촌동',
                                 )),
                       );
@@ -450,7 +450,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 고운",
+                                  region: "세종(특별)?(자치)?시? 고운",
                                   regionName: '세종특별자치시 고운동',
                                 )),
                       );
@@ -476,7 +476,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 보람",
+                                  region: "세종(특별)?(자치)?시? 보람",
                                   regionName: '세종특별자치시 보람동',
                                 )),
                       );
@@ -508,7 +508,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 새롬",
+                                  region: "세종(특별)?(자치)?시? 새롬",
                                   regionName: '세종특별자치시 새롬동',
                                 )),
                       );
@@ -534,7 +534,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 대평",
+                                  region: "세종(특별)?(자치)?시? 대평",
                                   regionName: '세종특별자치시 대평동',
                                 )),
                       );
@@ -566,7 +566,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 소담",
+                                  region: "세종(특별)?(자치)?시? 소담",
                                   regionName: '세종특별자치시 소담동',
                                 )),
                       );
@@ -592,7 +592,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 다정",
+                                  region: "세종(특별)?(자치)?시? 다정",
                                   regionName: '세종특별자치시 다정동',
                                 )),
                       );
@@ -624,7 +624,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 해밀",
+                                  region: "세종(특별)?(자치)?시? 해밀",
                                   regionName: '세종특별자치시 해밀동',
                                 )),
                       );
@@ -650,7 +650,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 반곡",
+                                  region: "세종(특별)?(자치)?시? 반곡",
                                   regionName: '세종특별자치시 반곡동',
                                 )),
                       );
@@ -682,7 +682,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 나성",
+                                  region: "세종(특별)?(자치)?시? 나성",
                                   regionName: '세종특별자치시 나성동',
                                 )),
                       );
@@ -708,7 +708,7 @@ class SejongPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegionList(
-                                  region: "세종?(특별)?(자치)?시? 어진",
+                                  region: "세종(특별)?(자치)?시? 어진",
                                   regionName: '세종특별자치시 어진동',
                                 )),
                       );
