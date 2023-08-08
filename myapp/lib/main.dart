@@ -8,7 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 
-List<Map> favorite_list = [];
+List<Map> favorite_list = []; /* 여기서는 전역변수로 선언했는데, 더 나은 방법이 있으려나.... */
 late SharedPreferences sp;
 
 Future getStationList() async {
@@ -19,7 +19,7 @@ Future getStationList() async {
 
 void main() async {
   runApp(MyApp());
-  sp = await SharedPreferences.getInstance();
+  sp = await SharedPreferences.getInstance(); /* 앱을 처음 실행할 때 SharedPreferences를 불러와서 즐겨찾기 리스트를 채운다. */
   if (sp.getStringList("favorite") != null) {
     final List<String> favCodes = sp.getStringList("favorite")!;
     final String SAfiledata = await getStationList();
