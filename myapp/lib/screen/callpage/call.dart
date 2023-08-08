@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 import '../../main.dart';
 
 class RegionList extends StatefulWidget {
-  /* 지역별 주유소 리스트. */
+  /* 지역별 주유소 리스트. region은 지역명 정규표현식, regionName은 지역명 평문. region에 들어있는 식으로 시작하는 모든 주유소를 표시한다. */
   final String region, regionName;
   const RegionList({super.key, required this.region, required this.regionName});
 
@@ -125,12 +125,12 @@ class TestDetailPage extends StatelessWidget {
 
   static Future<http.Response> getSAData(SACode) async {
     final resp = http.get(Uri.parse(
-        "http://data.ex.co.kr/openapi/business/curStateStation?key=test&type=json&numOfRows=10&pageNo=1&serviceAreaCode2=$SACode"));
+        "http://data.ex.co.kr/openapi/business/curStateStation?key=test&type=json&numOfRows=10&pageNo=1&serviceAreaCode2=$SACode")); /* 정말 당연한 이유로 APIKey를 test로 바꿔놨다.... */
     return resp;
   }
 
-  Future<void> updateFav(String code, {bool remove = false}) async {
-//    final SharedPreferences prefs = await _prefs;
+  Future<void> updateFav(String code, {bool remove = false}) async { /* 즐겨찾기를 갱신하는 함수. SharedPreferences를 이용한다. remove = true인 경우 삭제, 그렇지 않으면 추가. */
+//    final SharedPreferences prefs = await _prefs; /* 이건 지웠어야 하는데, 왜 comment해놨을까? */
     if (!remove) {
       if (sp.getStringList("favorite") != null) {
         List<String> favCodes = sp.getStringList("favorite")!;
@@ -153,12 +153,12 @@ class TestDetailPage extends StatelessWidget {
     final SAData = getSAData(SACode);
     bool isFavorite = false;
     dynamic useIcon;
-    if (favorite_list.indexWhere((f) => f["code"] == SACode) != -1) {
+    if (favorite_list.indexWhere((f) => f["code"] == SACode) != -1) { /* 즐겨찾기... .contains를 쓰지 않은 이유는 뭘까? */
       isFavorite = true;
     }
 
     if (isFavorite) {
-      useIcon = const Icon(Icons.star, semanticLabel: "즐겨찾기에 추가됨");
+      useIcon = const Icon(Icons.star, semanticLabel: "즐겨찾기에 추가됨"); /* 이걸 즉석에서 업데이트하고 싶었는데, 그러려면 StatefulWidget으로 짰어야 해. */
     } else {
       useIcon = const Icon(Icons.star_border, semanticLabel: "즐겨찾기에 추가");
     }
@@ -175,9 +175,7 @@ class TestDetailPage extends StatelessWidget {
                   favorite_list.add({"code": SACode, "name": SAName});
                   isFavorite = true;
                   updateFav(SACode);
-                  Fluttertoast.showToast(
-                      msg:
-                          "$SAName를 즐겨찾기에 추가했습니다."); /* 웹에서는 이 방식이 작동하지 않는데, Android와 iOS에선 작동한다고 한다. 어차피 안드로이드 앱이므로 상관없음. */
+                  Fluttertoast.showToast(msg: "$SAName를 즐겨찾기에 추가했습니다."); /* 웹에서는 이 방식이 작동하지 않는데, Android와 iOS에선 작동한다고 한다. 어차피 Target은 안드로이드이므로 상관없음. */
                 } else {
                   favorite_list
                       .removeWhere((element) => element["code"] == SACode);
@@ -191,7 +189,7 @@ class TestDetailPage extends StatelessWidget {
             )
           ],
         ),
-        floatingActionButton: FloatingActionButton(
+        floatingActionButton: FloatingActionButton( /* 우측 하단에 나오는 홈 버튼. */
             onPressed: () {
               Navigator.pushReplacement(
                 context,
@@ -230,7 +228,7 @@ class TestDetailPage extends StatelessWidget {
                   style: const TextStyle(
                       color: Color(0xff22aa22), fontSize: 22.00),
                 );
-                if (RealSAData['lpgYn'] == "Y") {
+                if (RealSAData['lpgYn'] == "Y") { /* Text에도 setter가 있을까? Text.setColor()처럼... */
                   LPGtext = Text(
                     "LPG ${RealSAData['lpgPrice']}",
                     style: const TextStyle(
@@ -273,7 +271,7 @@ class TestDetailPage extends StatelessWidget {
                                 color: const Color(0x33ff3333),
                                 child: Center(
                                   child: GasText,
-                                  heightFactor: 2.00,
+                                  heightFactor: 2.00, /* heightFactor를 2.00으로 하면 Center의 크기가 무제한이 아니라 child 위젯 크기의 2배로 제한된다더라. */
                                 ))),
                         ColoredBox(
                             color: const Color(0x3333ff33),
